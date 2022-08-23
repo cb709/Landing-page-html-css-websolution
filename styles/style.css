@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+    --primary-black: #212529;
+    --primary-blue: #00007C;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+p,
+ul,
+a,
+button {
+    margin-bottom: 0;
+    outline: none;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-button {
+    border-radius: 30px;
+    background-color: var(--primary-blue);
+    padding: 10px 20px;
+    color: var(--white);
+} 
+
+/* ----------top bar--------------- */
+
+.top-bar {
+    padding: 10px 0;
+}
+.top-header-btn {
+    padding: 6px 10px;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+    margin-left: 20px;
+}
+
+
+/* -----------main menu-------------- */
+
+.main-header {
+    padding: 15px 0;
+}
+.logo img {
+    max-width: 190px;
+}
+.menu ul li a{
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#login-btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 25px;
+    margin-right: 0;
+}
+.navbar {
+    height: 120px;
+    margin-bottom: -120px;
+    z-index: 100;
+}
+/* -----------------banner-section--------------- */
+.carousel-inner .item img {
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 10%;
+    width: 50%;
+    left: 10%;
+    z-index: 10;
+    text-align: left;
+}
+
+.carousel-caption h3,
+.carousel-caption h1 {
+    color: var(--primary-black);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.carousel-caption h3 {
+    font-size: 44px;
+    font-weight: 400;
+}
+.carousel-caption h1 {
+    font-size: 78px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: var(--primary-blue);
+}
+
+/* --------------service-section----------- */
+.service {
+    padding-top: 100px;
+}
+
+.service-heading {
+    text-align: center;
+    padding-bottom: 50px;
+    width: 85%;
+    margin: auto;
+}
+
+.service-heading h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-heading h3 b {
+    color: var(--primary-blue);
+    font-weight: 800;
+}
+.service-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-image {
+    padding: 0 20px;
+}
+.service-card {
+    border: 1px solid rgb(186, 183, 189);
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    margin: 30px 0;
+}
+
+.service-card img {
+    margin-top: -42px;
+    margin-bottom: 20px;
+}
+
+.service-card p a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-black);
+}
+
+/* -----------------get-in-touch-------- */
+.get-in-touch {
+    background-color: var(--primary-blue);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.get-in-touch-text h3 {
+    font-size: 36px;
+}
+
+.get-in-touch-text h4 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+.get-in-touch-text button {
+    border: 2px solid white;
+}
+.get-in-touch-text button:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: var(--primary-blue);
+}
+
+
+/* ----------Mobile Device ---------------------*/
+
+@media (max-width:767px) {
+    .top-bar {
+        padding: 10px 0;
+    }
+    p {
+        font-weight: 400;
+    }
+    .top-header-btn {
+        font-weight: 400;
+        margin-top: 10px;
+        margin-left: 0;
+        padding: 6px 15px;
+    }
+    .top-header-btn,
+    .top-header-text {
+        font-size: 12px;
+    }
+    .navbar {
+        margin-bottom: 0px;
+        z-index: 100;
+    }
+    .logo img {
+        max-width: 130px;
+    }
+}
+@media (max-width: 991px) {
+    .menu ul li a {
+        margin-right: 0px;
+    }
+}
+
+
+@media (max-width: 992px) { 
+    .logo img {
+        max-width: 140px;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .menu {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .menu ul li a {
+        font-size: 16px;
+    }
+
+    .menu ul li {
+        margin-bottom: 20px;
+    }
+    .top-header-btn,
+    .top-header-text {
+        font-size: 14px;
+    }
+ }
+
+ @media (max-width:1024px) {
+    .navbar {
+        margin-bottom: 0px;
+        z-index: 100;
+        height: 90px;
+    }
+    .logo img {
+        max-width: 150px;
+    }
+    .navbar-brand {
+        padding: 0;
+    }
+    .carousel-caption h3 {
+        font-size: 28px;
+    }
+    .carousel-caption h1 {
+        font-size: 58px;
+        margin-bottom: 20px;
+    }
+    .carousel-caption {
+        right: 5%;
+        left: 5%;
+   
+    }
+    .navbar .container {
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px 15px;
+        max-width: 100%;
+    }
+}
+    
+
+
+@media (min-width:992px) and (max-width:1024px) {
+    .navbar {
+        margin-bottom: -90px;
+    }
+    .navbar .container {
+        background-color: #ffffff00;
+    }
+}
+
+@media (min-width:1070px) and (max-width:1176px) {
+
+    .carousel-caption h3 {
+        font-size: 34px;
+    }
+    .carousel-caption h1 {
+        font-size: 68px;
+        margin-bottom: 20px;
+    }
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+    
+}
+
+@media (min-width:1025px) and (max-width:1069px) {
+
+    .carousel-caption h3 {
+        font-size: 30px;
+    }
+    .carousel-caption h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+    
+}
+
+@media(max-width:740px) {
+
+    .carousel-caption {
+        width: 80%;
+    }
+    .carousel-caption h3 {
+        font-size: 22px;
+    }
+    .carousel-caption h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+
+    .banner-buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+}
+
+@media(max-width:520px) {
+
+    .carousel-caption {
+        width: 100%;
+        top: 20px;
+        padding: 0;
+    }
+    .carousel-caption h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .carousel-caption h1 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    .carousel-caption {
+        right: 5%;
+        left: 5%;
+    }
+
+    .banner-buttons button {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .top-header-btn,
+    .top-header-text {
+        font-size: 10px;
+    }
+    
+}

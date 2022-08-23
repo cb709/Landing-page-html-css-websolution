@@ -4,47 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
     <title>Central Singing Service</title>
   </head>
   <body>
     <header>
-
       <!-- ----------------------top-header----------------------- -->
       <div class="top-bar bg-dark text-white">
         <div
           class="container d-md-flex justify-content-center text-center align-items-center"
         >
-          <p class="me-md-2">
+          <p class="top-header-text">
             <u>R</u>emote <u>O</u>nline <u>N</u>otarization Services now
             available!
           </p>
-          <a href="#" class="btn btn-sm text-white border ms-md-2 top-header-btn">Learn More</a>
-        </div>
-      </div>
-      
-      <!-- --------------main header-------------------- -->
-      <div class="main-header">
-        <div class="container d-md-flex justify-content-between text-center align-items-center">
-            <div class="logo"><img src="images/logo.png" alt=""></div>
-            <div class="menu">
-                <ul class="d-md-flex align-items-center">
-                    <li><a class="text-dark" href="#">Home</a></li>
-                    <li><a class="text-dark" href="#">About</a></li>
-                    <li><a class="text-dark" href="#">Services</a></li>
-                    <li><a class="text-dark" href="#">FAQ</a></li>
-                    <li><a class="text-dark" href="#">Contact</a></li>
-                    <li><a class="btn text-white bg-dark" id="login-btn" href="#">Login</a></li>
-                </ul>
-            </div>
+          <a href="#" class="btn btn-sm text-white border top-header-btn"
+            >Learn More</a
+          >
         </div>
       </div>
 
+      <!-- ------------------bootstrap navbar------------ -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><div class="logo"><img src="images/logo.png" alt="" /></div
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="menu">
+              <ul class="d-lg-flex align-items-center">
+                <li><a class="text-dark" href="#">Home</a></li>
+                <li><a class="text-dark" href="#">About</a></li>
+                <li><a class="text-dark" href="#">Services</a></li>
+                <li><a class="text-dark" href="#">FAQ</a></li>
+                <li><a class="text-dark" href="#">Contact</a></li>
+                <li>
+                  <a class="btn text-white main-button" id="login-btn" href="#"
+                    >Login</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- ----------------------banner-section---------- -->
+    <section class="banner">
+      <div class="banner-sec-home">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <img
+                src="images/1-img.jpg"
+                alt="slider_image"
+              />
+              <div class="container">
+                <div class="carousel-caption">
+                  <h3>Your Nationwide</h3>
+                  <h1>Signing Solution</h1>
+                  <div class="banner-buttons">
+                    <button
+                      type="button"
+                      class="btn main-button"
+                    >
+                      Become A Client Today
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------service section------------------------- -->
+
+    <section class="service">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="service-heading">
+              <h3><b>Notary</b> Signing Services</h3>
+            <p>Central Signing Service, Inc. offers extensive nationwide mobile notary services to meet all your document signing needs. Utilizing a cutting edge online tracking system, all document signing requests are managed with efficiency and handled with care by our nationwide network of Signing Agents.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="service-col col-3">
+            <div class="service-card">
+              <img src="/images/circle1.png" alt="">
+              <p><a href="#">Real Estate</a></p>
+            </div>
+            <div class="service-card">
+              <img src="images/mobile-notary.png" alt="">
+              <p><a href="#">Mobile Notary Public</a></p>
+            </div>
+          </div>
+          <div class="service-image col-6">
+            <div class="service-image">
+              <img src="images/img-4.png" alt="">
+            </div>
+            
+          </div>
+          <div class="service-col col-3">
+            <div class="service-card">
+              <img src="/images/circle3.png" alt="">
+              <p><a href="#">Mortgages</a></p>
+            </div>
+            <div class="service-card">
+              <img src="images/vehicle.png" alt="">
+              <p><a href="#">Vehicle Transactions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------get-in-touch---------- -->
+    <section class="get-in-touch">
+      <div class="container">
+        <div class="get-in-touch-text">
+          <h3>Generating A Signing Request Is Easy</h3>
+          <h4>Get Started Now</h4>
+          <button class="btn main-button" >Sign Up or Log In</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
