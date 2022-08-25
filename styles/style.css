@@ -19,6 +19,12 @@ body {
 h3 {
   font-size: 40px;
 }
+li {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+}
 p,
 ul,
 a,
@@ -100,11 +106,25 @@ p {
 
 .carousel-caption {
   position: absolute;
-  right: 10%;
-  width: 50%;
-  left: 10%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
   z-index: 10;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0 0 0;
+}
+
+.carousel-caption .container {
+  padding: 0;
+}
+.text-container {
+  width: 40%;
 }
 
 .carousel-caption h3,
@@ -225,11 +245,11 @@ p {
 .professional-signing {
   float: left;
   width: 100%;
-  background: url(/images/img-6.jpg);
+  background: url(/images/img-6.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 90px 0;
   position: relative;
+  padding: 100px 0;
   overflow: hidden;
 }
 .professional-signing-left {
@@ -252,24 +272,11 @@ p {
 }
 
 .professional-signing-right {
-  background: url(/images/img-5.png);
-  background-size: cover;
-  background-position: center;
   position: absolute;
   width: 1084px;
-  height: 619px;
   right: -200px;
   top: 0;
 }
-
-@media (max-width: 1300px) {
-  .professional-signing-right {
-    right: -270px;
-    top: 0px;
-  }
-}
-
-
 
 /* ---------------love-center----------------- */
 .love-center {
@@ -279,9 +286,6 @@ p {
   padding: 100px 0;
 }
 
-.love-center .row {
-  flex-direction: column;
-}
 
 .love-center h3 {
   text-align: center;
@@ -290,8 +294,6 @@ p {
 }
 
 .love-center-list li {
-  width: 25%;
-  float: left;
   text-align: center;
 }
 
@@ -416,6 +418,10 @@ p {
   color: #fff;
   font-size: 14px;
 }
+.bottom-footer .container {
+  max-width: 100%;
+  padding: 0 20px;
+}
 
 .bottom-footer {
   float: left;
@@ -434,7 +440,6 @@ p {
 }
 
 .bottom-footer .bottom-left {
-  float: left;
   font-size: 12px;
   color: #fff;
   margin: 0;
@@ -450,9 +455,11 @@ p {
   margin: 0 auto;
 }
 
-.menu-footer-menu2-container ul li {
-  float: left;
-  padding: 0px 15px;
+.menu-footer-menu2-container ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .menu-footer-menu2-container ul li a {
@@ -466,10 +473,10 @@ p {
 }
 
 .bottom-footer .bottom-right {
-  float: right;
   font-size: 12px;
   color: #fff;
   margin: 0;
+  text-align: center;
 }
 
 .bottom-footer .bottom-right a,
@@ -481,15 +488,26 @@ p {
 /* --------------------------------------------------------- */
 
 @media (max-width: 1200px) {
-    .professional-signing-right {
-      right: -390px;
-      top: 0px;
-      height: 600px;
-    }
-    .professional-signing {
-      padding: 70px 0;
-    }
+  .professional-signing-right {
+    right: -490px;
+    top: 0px;
+    height: 600px;
   }
+  .professional-signing {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .professional-signing-right {
+    right: -490px;
+    top: 0px;
+    height: 600px;
+  }
+  .professional-signing {
+    padding: 50px 0;
+  }
+}
 
 @media (min-width: 1070px) and (max-width: 1176px) {
   .carousel-caption h3 {
@@ -498,10 +516,6 @@ p {
   .carousel-caption h1 {
     font-size: 68px;
     margin-bottom: 20px;
-  }
-  .carousel-caption {
-    right: 10%;
-    left: 10%;
   }
 }
 
@@ -512,10 +526,6 @@ p {
   .carousel-caption h1 {
     font-size: 60px;
     margin-bottom: 20px;
-  }
-  .carousel-caption {
-    right: 10%;
-    left: 10%;
   }
 }
 
@@ -538,26 +548,22 @@ p {
     font-size: 58px;
     margin-bottom: 20px;
   }
-  .carousel-caption {
-    right: 5%;
-    left: 5%;
-  }
   .navbar .container {
     background-color: #ffffff;
     width: 100%;
     padding: 10px 15px;
     max-width: 100%;
   }
-  .top-right-footer a, .top-right-footer li {
+  .top-right-footer a,
+  .top-right-footer li {
     color: #fff;
     font-size: 20px;
-}
-.top-left-footer h3,
-.top-right-footer h3 {
-   font-size: 30px;
-   line-height: 1.5em;
-}
-
+  }
+  .top-left-footer h3,
+  .top-right-footer h3 {
+    font-size: 30px;
+    line-height: 1.5em;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
@@ -568,9 +574,9 @@ p {
     background-color: #ffffff00;
   }
 }
-
+/* ---------------------------- */
 /* * ----------Mobile Device- 992 ---------------------*/
-
+/* -------------------------------- */
 @media (max-width: 992px) {
   .logo img {
     max-width: 140px;
@@ -595,12 +601,33 @@ p {
   .top-header-text {
     font-size: 14px;
   }
+
+  .carousel-caption {
+    padding: 0;
+  }
+  .top-right-footer a,
+  .top-right-footer li {
+    color: #fff;
+    font-size: 14px;
+  }
+  .bottom-footer .bottom-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 }
 
 @media (max-width: 991px) {
   .menu ul li a {
     margin-right: 0px;
   }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+
 }
 
 /* ----------Mobile Device- 767 ---------------------*/
@@ -611,7 +638,6 @@ p {
   }
   p {
     font-size: 14px;
-    font-weight: 400;
     line-height: 1.5em;
   }
   h3 {
@@ -637,15 +663,22 @@ p {
   .sm-mt-40 {
     margin-top: 40px;
   }
+
+  .carousel-caption {
+    padding: 0;
+  }
+  .text-container {
+    width: 50%;
+  }
   /* ---------service----------- */
+  .service-card {
+    margin: 40px 0px;
+  }
   .service {
     padding-top: 50px;
   }
   .service-heading h3 {
     font-size: 32px;
-  }
-  .service-col {
-    padding: 0 50px;
   }
   .service-card p a {
     font-size: 16px;
@@ -677,28 +710,17 @@ p {
   }
   .become-a-client-text {
     margin-top: 30px;
-    text-align: center;
-    align-items: center;
   }
   /* -------------agent section--------- */
   .professional-signing {
-    padding: 50px 0;
-  }
-  .professional-signing-left {
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-    flex: 0 0 60%;
-    max-width: 70%;
+    padding: 30px 0;
   }
   .professional-signing-right {
-    right: -650px;
+    right: -350px;
     top: 0px;
     height: 600px;
   }
-  /* .professional-signing-right {
-    display: none;
-  } */
+
   /* ----------love center----------- */
   .love-center {
     padding: 50px 20px;
@@ -743,6 +765,7 @@ p {
     margin: 0 5px;
   }
   .top-right-footer {
+    padding-top: 30px;
     padding-left: 20px;
   }
   .fa-brands,
@@ -753,8 +776,8 @@ p {
   }
   .top-right-footer h3 {
     font-size: 20px;
-    margin-top: 30px;
   }
+  
   .top-right-footer a,
   .top-right-footer li {
     color: #fff;
@@ -782,6 +805,12 @@ p {
     width: 100%;
     text-align: center;
   }
+  .menu-footer-menu2-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
   .menu-footer-menu2-container ul li {
     width: 100%;
     text-align: center;
@@ -792,18 +821,14 @@ p {
   }
 }
 
-@media (min-width:768px) and (max-width:769px) {
-
-    .top-header-btn {
-        margin-top: 0;
-        margin-left: 10px;
-    }
+@media (min-width: 768px) and (max-width: 769px) {
+  .top-header-btn {
+    margin-top: 0;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 740px) {
-  .carousel-caption {
-    width: 80%;
-  }
   .carousel-caption h3 {
     font-size: 22px;
   }
@@ -811,24 +836,20 @@ p {
     font-size: 40px;
     margin-bottom: 15px;
   }
-  .carousel-caption {
-    right: 10%;
-    left: 10%;
-  }
 
   .banner-buttons button {
     padding: 8px 15px;
     font-size: 14px;
   }
 }
-
-/* ----------Mobile Device- 520 ---------------------*/
-
-@media (max-width: 520px) {
+/* ----------------------------- */
+/* ----------Mobile Device- 576 ---------------------*/
+/* ------------------------------------------- */
+@media (max-width: 576px) {
   h3 {
     font-size: 22px !important;
   }
-  .carousel-caption {
+  .text-container {
     width: 100%;
     top: 20px;
     padding: 0;
@@ -857,17 +878,34 @@ p {
   .top-header-btn {
     margin-top: 0;
   }
-  .professional-signing-right {
-    display: none;
+
+  .service .container {
+    padding: 0 20px;
   }
+
+  .service-card {
+    margin: 40px 0;
+  }
+  .service-col {
+    padding: 0 50px;
+  }
+
   .professional-signing-left {
     align-items: center;
     text-align: center;
     width: 100%;
     flex: 0 0 100%;
     max-width: 100%;
-}
-.professional-signing {
+  }
+  .professional-signing-right {
+    display: none;
+  }
+  .professional-signing {
     padding: 50px 20px;
-}
+  }
+  .become-a-client-text {
+    margin-top: 30px;
+    text-align: center;
+    align-items: center;
+  }
 }
