@@ -220,7 +220,7 @@ p {
 /* -------------become a client ---------------- */
 .become-a-client {
   padding: 100px 0;
-  background-image: url(/images/img-2.png);
+  background: url(/images/img-2.png);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
