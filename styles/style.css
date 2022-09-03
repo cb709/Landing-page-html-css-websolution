@@ -8,8 +8,8 @@
 }
 
 :root {
-  --primary-black: #212529;
-  --primary-blue: #00007c;
+  --primary-black: #070707;
+  --primary-blue: #0066cc;
   --white: #ffffff;
 }
 
@@ -60,11 +60,16 @@ p {
   padding: 10px 20px;
   color: var(--white);
 }
+.main-button:hover {
+  background-color: var(--primary-black);
+  color: var(--white);
+}
 
 /* ----------top bar--------------- */
 
 .top-bar {
   padding: 10px 0;
+  background-color: var(--primary-black);
 }
 .top-header-btn {
   padding: 6px 10px;
