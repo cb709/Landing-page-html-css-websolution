@@ -191,6 +191,7 @@ p {
 .service-card img {
   margin-top: -42px;
   margin-bottom: 20px;
+  max-width: 90px;
 }
 
 .service-card p a {
